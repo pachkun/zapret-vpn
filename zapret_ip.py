@@ -49,7 +49,7 @@ def processing_data(data: str) -> Counter:
     logging.info('%s', data_split[0])
     for line in data_split[1:]:
         ip_counter.update(processing_line(line))
-    logging.info('ip in list %s', len(ip_counter))
+    logging.info('ip in list %s', sum([ip_network(ip).num_addresses for ip in ip_counter]))
     logging.info('top 10 ip %s', ip_counter.most_common(10))
     return ip_counter
 
