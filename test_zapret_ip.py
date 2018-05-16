@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 from collections import Counter
-import pytest
 from zapret_ip import clean_data_line, DELIMITER_CSV, processing_line, processing_data
 
 __author__ = 'pachkun'
